@@ -1201,6 +1201,12 @@ section,
   overflow: hidden;
 }
 
+.portfolio-item video{
+width:100%;
+height:225px;
+object-fit:cover;
+}
+
 .portfolio .portfolio-item .portfolio-info {
   opacity: 0;
   position: absolute;
