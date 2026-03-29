@@ -254,6 +254,28 @@
      }
     </script>
 
+  <script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  fetch("https://flow.zoho.in/60068387972/flow/webhook/incoming?zapikey=1001.e079111c5968322a8835feb333ed6769.17ca8aae66ce8ead510812f3e4f9e9d5&isdebug=false", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      name: document.getElementById("name-field").value,
+      email: document.getElementById("email-field").value,
+      phone: document.getElementById("subject-field").value,
+      message: document.getElementById("message-field").value
+    })
+  })
+  .then(() => alert("Form submitted!"))
+  .catch(() => alert("Error!"));
+});
+</script>
+  
+
 </body>
 
 </html>
