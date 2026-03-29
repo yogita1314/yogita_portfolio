@@ -260,6 +260,7 @@ document.getElementById("form").addEventListener("submit", function(e) {
 
   fetch("https://flow.zoho.in/60068387972/flow/webhook/incoming?zapikey=1001.9a136b44d277d881f977b29d7af57797.543f0b6a9834f840187a4347cb63904c&isdebug=false", {
     method: "POST",
+    mode: "no-cors",   // 👈 IMPORTANT
     headers: {
       "Content-Type": "application/json"
     },
