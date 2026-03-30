@@ -245,14 +245,15 @@
        var name = document.querySelector(".name").value;
        var email = document.querySelector(".email").value;
        var phone = document.querySelector(".phone").value;
+       var company = document.querySelector(".company").value;
        var message = document.querySelector(".message").value;
 
        var url = "https://wa.me/" + phonenumber + "?text="
        +"*Name :* "+name+"%0a"
        +"*Email :* "+email+"%0a"
        +"*Phone:* "+phone+"%0a"
-       +"*Message :* "+message
-       +"%0a%0a";
+       +"*Company:* "+company+"%0a"
+       +"*Message :* "+message+"%0a%0a";
       //  +"This is an example of send HTML form data to WhatsApp"
 
        window.open(url, '_blank').focus();
