@@ -145,9 +145,14 @@
                   <input type="email" class="form-control email" name="email" id="email-field" required="">
                 </div>
 
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <label for="subject-field" class="pb-2">Phone</label>
                   <input type="text" class="form-control phone" name="phone" id="subject-field" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="company-field" class="pb-2">Company</label>
+                  <input type="text" class="form-control company" name="phone" id="company-field" required="">
                 </div>
 
                 <div class="col-md-12">
@@ -213,7 +218,7 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    let url='https://script.google.com/macros/s/AKfycbx9Ujtgfid1EuT1AoSMAddBo2fP_dSC75Z3VmPhL8C72C24g5r1Vlvmo8s2_rxUzr2M/exec'
+    let url='https://script.google.com/macros/s/AKfycbxD8-vdM-Eq-9Tyw_QK3aE8d_BxzPoDK9-vbB4Pfey5DsPmRkS8BPExrKyeDOYMgKuo/exec'
     let form=document.querySelector('#form');
     form.addEventListener("submit",(e)=>{
      e.target.btn.innerHTML="Submitting....";
@@ -268,6 +273,7 @@ document.getElementById("form").addEventListener("submit", function(e) {
       name: document.getElementById("name-field").value,
       email: document.getElementById("email-field").value,
       phone: document.getElementById("subject-field").value,
+      company: document.getElementById("company-field").value,
       message: document.getElementById("message-field").value
     })
   })
