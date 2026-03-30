@@ -260,7 +260,7 @@
      }
     </script>
 
-  <script>
+  <!-- <script>
 document.getElementById("form").addEventListener("submit", function(e) {
   e.preventDefault();
 
@@ -280,6 +280,26 @@ document.getElementById("form").addEventListener("submit", function(e) {
   });
 
   alert("Form submitted successfully!");
+});
+</script> -->
+
+  <script>
+document.getElementById("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const formData = new FormData();
+  formData.append("name", document.getElementById("name-field").value);
+  formData.append("email", document.getElementById("email-field").value);
+  formData.append("phone", document.getElementById("subject-field").value);
+  formData.append("company", document.getElementById("company-field").value);
+  formData.append("message", document.getElementById("message-field").value);
+
+  fetch("https://flow.zoho.in/60068387972/flow/webhook/incoming?zapikey=1001.f2210c6075d87fd3fd6a1ca475484446.aebd45c7d63e0b35e511dc50c80c91fb&isdebug=false", {
+    method: "POST",
+    body: formData   // 👈 JSON नहीं, FormData भेजो
+  });
+
+  alert("Form submitted!");
 });
 </script>
   
