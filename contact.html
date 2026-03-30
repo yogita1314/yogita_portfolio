@@ -264,25 +264,23 @@
 document.getElementById("form").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  const data = {
+  fetch("https://flow.zoho.in/60068387972/flow/webhook/incoming?zapikey=1001.f2210c6075d87fd3fd6a1ca475484446.aebd45c7d63e0b35e511dc50c80c91fb&isdebug=false", {
+    method: "POST",
+    mode: "no-cors",   // 👈 IMPORTANT
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
       name: document.getElementById("name-field").value,
       email: document.getElementById("email-field").value,
       phone: document.getElementById("subject-field").value,
       company: document.getElementById("company-field").value,
       message: document.getElementById("message-field").value
-    };
-  fetch("https://flow.zoho.in/60068387972/flow/webhook/incoming?zapikey=1001.670584a8ab38416a619ad34481b651e4.64aa9700a97302487815a978f57b259f&isdebug=false", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-  })
-  .then(res => console.log("Success", res))
-  .catch(err => console.log("Error", err));
-  console.log(data);
+    })
+  });
+
+  alert("Form submitted successfully!");
 });
-    
 </script>
   
 
