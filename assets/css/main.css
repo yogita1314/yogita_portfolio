@@ -713,6 +713,7 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  opacity: 0.3;
 }
 
 .hero .container {
@@ -722,13 +723,13 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
 }
 
 .hero p {
   margin: 10px 0 0 0;
-  font-size: 24px;
+  font-size: 20px;
   color: var(--heading-color);
 }
 
@@ -753,11 +754,11 @@ section,
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .hero p {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 
